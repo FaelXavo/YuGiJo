@@ -12,8 +12,8 @@ public class Held {
     private String bild;
 
     //Konstruktoren
-    public Held(String name, String typ, String beschreibung, int maxHP, int currentHP,
-                int angrifswert, int ruestung, int magieresistenz, String bild) {
+    public Held(String name, String typ, String beschreibung, int maxHP,
+                int angrifswert, int ruestung, int magieresistenz) {
 
         this.name = name;
         this.typ = typ;

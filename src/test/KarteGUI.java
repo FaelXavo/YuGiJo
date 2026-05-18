@@ -21,7 +21,7 @@ import karte.Karte;
 
 public class KarteGUI extends JFrame {
   // Anfang Attribute
-  Held h = new Held("Kitty", "Dämon", "Mistvieh", 25, 75, 50, 50);
+  Held h = new Held("Kitty", "Daemon", "Mistvieh", 25, 75, 50, 50);
   Karte k = new Karte(h);
   // Ende Attribute
 
