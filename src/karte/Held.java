@@ -145,5 +145,5 @@ public class Held {
         this.currentHP += heilung;
         if(this.currentHP > this.maxHP)
             this.currentHP = this.maxHP;
-    }
+    } 
 }
