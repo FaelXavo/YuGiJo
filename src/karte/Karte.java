@@ -131,7 +131,7 @@ public class Karte extends JPanel {
 
 			// Bild laden
 			try {
-				lblBild.setIcon(new ImageIcon("./src/Bildname.png"));
+				lblBild.setIcon(new ImageIcon("./src/Kitty.jpg"));
 			} catch (Exception e) {
 				lblBild.setText("Bild nicht gefunden");
 			}
