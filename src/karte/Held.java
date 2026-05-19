@@ -1,6 +1,9 @@
 package karte;
 
 /**
+ * @author Rafael Xavier
+ *
+ *
  * Repräsentiert einen Helden (Karte) mit Namen, Typ, Beschreibung, Lebenspunkten
  * und statistischen Werten wie Angriff, Rüstung und Magieresistenz.
  *
