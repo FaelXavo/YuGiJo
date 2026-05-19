@@ -23,13 +23,14 @@ import karte.Held;
 import karte.Karte;
 
 /**
-  *
-  * GUI zum Spiel Prince of Darkness
-  *
-  * @version 0.1 vom 24.10.2012
-  * @author Tenbusch
-  */
-
+ * GUI zum Spiel "Prince of Darkness".
+ *
+ * Diese Klasse baut das Spiel-Interface auf, benutzt und bearbeitet zwei Helden, 
+ * Leisten für Leben und die Steuerung der Spielrunden. Nutzer können die
+ * Runden über einen Next-Button. Die Logik für die Schadensberechnung
+ * und zur Anzeige des Gewinners kommen in der Action-Methode vor.
+ *
+ */
 public class PrinceOfDarkness extends JFrame {
   // Anfang Attribute
   private int runde = 1;
@@ -47,6 +48,10 @@ public class PrinceOfDarkness extends JFrame {
     private JLabel lbl_lebensverlustRechts = new JLabel();
   // Ende Attribute
 
+  /**
+   * Erzeugt das Spiel-Fenster und initialisiert alle GUI-Komponenten.
+   *
+   */
   public PrinceOfDarkness(String title, Held heldLinks, Held heldRechts) {
     // Frame-Initialisierung
     super(title);
@@ -147,6 +152,14 @@ public class PrinceOfDarkness extends JFrame {
   }
 
   // Anfang Methoden
+  /**
+   * Action-Handler für den Next-Button.
+   *
+   * Bei jedem Aufruf wird eine Spielrunde ausgeführt: beide Helden greifen
+   * einander an, Lebenspunkte werden aktualisiert, es wird geprüft, ob ein
+   * Gewinner feststeht oder ein Reset gebraucht ist.
+   *
+   */
   public void btn_next_ActionPerformed(ActionEvent evt) {
     Held l = karteLinks.getHeld();
     Held r = karteRechts.getHeld();
@@ -163,12 +176,12 @@ public class PrinceOfDarkness extends JFrame {
       lbl_lebensverlustLinks.setText("");
       lbl_lebensverlustRechts.setText("");
     }else{
-      //Schaden f�r linken Held berechnen
+      //Schaden f�r linken Held berechnen
       int schadenLinks = l.getAktLeben();
       l.leiden(r.angreifen());
       schadenLinks -= l.getAktLeben();
       
-      //Schaden f�r rechten Held berechnen
+      //Schaden f�r rechten Held berechnen
       int schadenRechts = r.getAktLeben();
       r.leiden(l.angreifen());
       schadenRechts -= r.getAktLeben();
@@ -183,7 +196,7 @@ public class PrinceOfDarkness extends JFrame {
       pgb_lebenLinks.setString("(" + lebenspunkteLinks + " / " + l.getMaxLeben() + ")");
       pgb_lebenRechts.setString("(" + lebenspunkteRechts + " / " + r.getMaxLeben() + ")");
 
-      //pr�fen ob ein Held besiegt wurde
+      //pr�fen ob ein Held besiegt wurde
       if (lebenspunkteLinks <= 0 && lebenspunkteRechts <= 0){
         btn_next.setText("Reset");
         runde = 0;

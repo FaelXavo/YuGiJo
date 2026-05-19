@@ -55,7 +55,7 @@ public class Karte extends JPanel {
         setBackground(new Color(255, 0, 0)); // Rot
 
         /* NORTH (Name und Typ)
-         * oberPanel verwendet BorderLayout, damit Name links und Typ rechts stehen.
+         * oberPanel verwendet BorderLayout, damit Name links und Typ rechts stehen. 
          */
         JPanel oberPanel = new JPanel();
         oberPanel.setLayout(new BorderLayout());

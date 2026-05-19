@@ -12,19 +12,28 @@ import karte.Held;
 import karte.Karte;
 
 /**
-  *
   * GUI-Klasse zum testweisen Anzeigen einer Karte
   *
-  * @version 1.0 from 19.10.2012
-  * @author Tenbusch
+  * Erstellt eine kleine JFrame-Anwendung, die eine einzelne Karte zur
+  * Darstellung eines Helden zeigt.
   */
-
 public class KarteGUI extends JFrame {
   // Anfang Attribute
+  /**
+   * Test Held, dessen Daten auf der Karte angezeigt werden.
+   */
   Held h = new Held("Kitty", "Daemon", "Mistvieh", 25, 75, 50, 50);
+
+  /**
+   * Karte Komponente, die den Held anzeigt.
+   */
   Karte k = new Karte(h);
   // Ende Attribute
 
+  /**
+   * Erzeugt das Testfenster und positioniert es zentriert auf dem Bildschirm.
+   * Initialisiert die GUI und fügt die Karte in das Content Pane ein.
+   */
   public KarteGUI (String title) {
     super (title);
     setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -47,6 +56,9 @@ public class KarteGUI extends JFrame {
   // Anfang Methoden
   // Ende Methoden
 
+  /**
+   * Startet die Testanwendung.
+   */
   public static void main(String[] args) {
     new KarteGUI("KarteGUI");
   }
