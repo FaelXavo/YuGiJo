@@ -1,5 +1,11 @@
 package karte;
-
+/**
+* @author Amon Hanke
+* 
+* Die Klasse erstellt ein das GUI der Karte
+*
+*
+*/
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
