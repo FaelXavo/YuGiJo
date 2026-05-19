@@ -23,6 +23,11 @@ public class Held {
 
     /**
      * Erzeugt einen Helden mit allen angegebenen Eigenschaften.
+     *
+     * @param name
+     * @param typ
+     * @param beschreibung
+     * @param maxHP 
      */
     public Held(String name, String typ, String beschreibung, int maxHP,
                 int angrifswert, int ruestung, int magieresistenz, String bild) {
