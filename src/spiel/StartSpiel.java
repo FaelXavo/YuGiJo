@@ -10,7 +10,9 @@ public class StartSpiel {
 
   /**
    * Anfang der Anwendung. Erstellt zwei Helden und öffnet
-   * das Window (PrinceOfDarkness).
+   * das Window.
+   *
+    * @param args Ausführung der Anwendung.
    */
   public static void main(String[] args) {
     Held kitty = new Held("Kitty", "D�mon", "Dschinn der 4. Kategorie", 100, 40, 0, 90, 

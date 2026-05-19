@@ -24,10 +24,14 @@ public class Held {
     /**
      * Erzeugt einen Helden mit allen angegebenen Eigenschaften.
      *
-     * @param name
-     * @param typ
-     * @param beschreibung
-     * @param maxHP 
+     * @param name Name des Helden.
+     * @param typ Typ des Helden.
+     * @param beschreibung Kurzbeschreibung des Helden.
+     * @param maxHP Maximale Lebenspunkte des Helden.
+     * @param angrifswert Angriffswert des Helden.
+     * @param ruestung Rüstungswert des Helden, reduziert physischen Schaden.
+     * @param magieresistenz Magieresistenz des Helden, reduziert magischen Schaden.
+     * @param bild Dateipfad oder Dateiname des Heldenbildes.
      */
     public Held(String name, String typ, String beschreibung, int maxHP,
                 int angrifswert, int ruestung, int magieresistenz, String bild) {
@@ -46,6 +50,7 @@ public class Held {
     /**
      * Erzeugt einen Helden mit Werten und einem Namen.
      *
+     * @param name Name des Helden.
      */
     public Held(String name) {
         this.name = name;
@@ -63,6 +68,8 @@ public class Held {
 
     /**
      * Gibt den Namen des Helden zurück.
+     *
+     * @return den Namen des Helden.
      */
     public String getName() {
         return name;
@@ -70,6 +77,8 @@ public class Held {
 
     /**
      * Gibt den Typ des Helden zurück.
+     *
+     * @return den Typ des Helden.
      */
     public String getTyp() {
         return typ;
@@ -77,6 +86,8 @@ public class Held {
 
     /**
      * Gibt die Beschreibung des Helden zurück.
+     *
+     * @return die Beschreibung des Helden.
      */
     public String getBeschreibung() {
         return beschreibung;
@@ -84,6 +95,8 @@ public class Held {
 
     /**
      * Gibt die maximalen Lebenspunkte des Helden zurück.
+     *
+     * @return die maximalen Lebenspunkte des Helden.
      */
     public int getMaxLeben() {
         return maxHP;
@@ -91,6 +104,8 @@ public class Held {
 
     /**
      * Gibt die aktuellen Lebenspunkte des Helden zurück.
+     *
+     * @return die aktuellen Lebenspunkte des Helden.
      */
     public int getAktLeben() {
         return currentHP;
@@ -98,6 +113,8 @@ public class Held {
 
     /**
      * Gibt den Angriffswert des Helden zurück.
+     *
+     * @return den Angriffswert des Helden.
      */
     public int getAngrifswert() {
         return angrifswert;
@@ -105,6 +122,8 @@ public class Held {
 
     /**
      * Gibt den Rüstungswert des Helden zurück.
+     *
+     * @return den Rüstungswert des Helden.
      */
     public int getRuestung() {
         return ruestung;
@@ -112,6 +131,8 @@ public class Held {
 
     /**
      * Gibt die magische Resistenz des Helden zurück.
+     *
+     * @return die magische Resistenz des Helden.
      */
     public int getMagieresistenz() {
         return magieresistenz;
@@ -119,6 +140,8 @@ public class Held {
 
     /**
      * Gibt den Dateinamen des Bildes des Helden zurück.
+     *
+     * @return den Dateinamen oder Pfad des Heldbildes.
      */
     public String getBild() {
         return bild;
@@ -128,6 +151,8 @@ public class Held {
 
     /**
      * Setzt den Namen des Helden.
+     *
+     * @param name Neuer Name des Helden.
      */
     public void setName(String name) {
         this.name = name;
@@ -135,6 +160,8 @@ public class Held {
 
     /**
      * Setzt den Typ des Helden.
+     *
+     * @param typ Neuer Typ/Kategorie des Helden.
      */
     public void setTyp(String typ) {
         this.typ = typ;
@@ -142,6 +169,8 @@ public class Held {
 
     /**
      * Setzt die Beschreibung des Helden.
+     *
+     * @param beschreibung Neue Kurzbeschreibung des Helden.
      */
     public void setBeschreibung(String beschreibung) {
         this.beschreibung = beschreibung;
@@ -149,6 +178,8 @@ public class Held {
 
     /**
      * Setzt die maximalen Lebenspunkte des Helden.
+     *
+     * @param maxHP Neue maximale Lebenspunkte des Helden.
      */
     public void setMaxLeben(int maxHP) {
         this.maxHP = maxHP;
@@ -156,6 +187,8 @@ public class Held {
 
     /**
      * Setzt die aktuellen Lebenspunkte des Helden.
+     *
+     * @param currentHP Neue aktuellen Lebenspunkte des Helden.
      */
     public void setAktHP(int currentHP) {
         this.currentHP = currentHP;
@@ -163,6 +196,8 @@ public class Held {
 
     /**
      * Setzt den Angriffswert des Helden.
+     *
+     * @param angrifswert Neuer Angriffswert des Helden.
      */
     public void setAngrifswert(int angrifswert) {
         this.angrifswert = angrifswert;
@@ -170,6 +205,8 @@ public class Held {
 
     /**
      * Setzt den Rüstungswert des Helden.
+     *
+     * @param ruestung Neuer Rüstungswert des Helden.
      */
     public void setRuestung(int ruestung) {
         this.ruestung = ruestung;
@@ -177,6 +214,8 @@ public class Held {
 
     /**
      * Setzt die magische Resistenz des Helden.
+     *
+     * @param magieresistenz Neue magische Resistenz des Helden.
      */
     public void setMagieresistenz(int magieresistenz) {
         this.magieresistenz = magieresistenz;
@@ -184,6 +223,8 @@ public class Held {
 
     /**
      * Setzt die Bilddatei des Helden.
+     *
+     * @param bild Neuer Dateipfad oder Name des Heldbildes.
      */
     public void setBild(String bild) {
         this.bild = bild;
@@ -191,6 +232,8 @@ public class Held {
 
     /**
      * Liefert eine String des Helden mit allen Attributen.
+     *
+     * @return eine String des Helden mit allen Attributen.
      */
     @Override
     public String toString() 
@@ -210,6 +253,8 @@ public class Held {
 
     /**
      * Führt einen Angriff auf ein anderen Held aus.
+     *
+     * @param ziel Das Ziel des Angriffs, also der angegriffene Held.
      */
     public void angreifen(Held ziel)
     {
@@ -219,6 +264,8 @@ public class Held {
     /**
      * Lässt den Helden Schaden erleiden und reduziert die aktuellen Lebenspunkte.
      * Lebenspunkte werden auf 0 begrenzt, falls sie negativ würden.
+     *
+     * @param schaden Anzahl an Schadenspunkten, die der Held erleidet.
      */
     public void leiden(int schaden)
     {
@@ -230,6 +277,8 @@ public class Held {
     /**
      * Heilt den Helden um die Menge; die Lebenspunkte werden auf
      * maxHP begrenzt.
+     *
+     * @param heilung Anzahl an Lebenspunkten, um die der Held geheilt wird.
      */
     public void heilen(int heilung)
     {

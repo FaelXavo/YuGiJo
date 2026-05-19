@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"Alle Klassen und Schnittstellen","u":"allclasses-index.html"},{"p":"karte","l":"Held"},{"p":"karte","l":"Karte"},{"p":"test","l":"KarteGUI"},{"p":"spiel","l":"PrinceOfDarkness"},{"p":"spiel","l":"StartSpiel"}];updateSearchResults();

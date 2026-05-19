@@ -33,11 +33,13 @@ public class Karte extends JPanel {
     private JLabel lblMagieresistenz;
     private JLabel lblAngriff;
 
-    /*
+    /**
      * Konstruktor:
      * Setzt das übergebene Held-Objekt als Datenübertragung.
      * Ruft die Methode initializeGUI() auf, um alle GUI-Komponenten zu erstellen.
      * Ruft die Methode updateGUI() auf, um die Daten zu übergeben.
+     *
+     * @param held Das darzustellende Held-Objekt.
      */
     public Karte(Held held) {
         this.held = held;
@@ -45,7 +47,7 @@ public class Karte extends JPanel {
         updateGUI();
     }
 
-    /*
+    /**
      * GUI-Aufbau (initializeGUI):
      * Layout: BorderLayout mit rotem Hintergrund (255, 0, 0) für die Karte.
      * NORTH: Zeigt Heldname und Typ in einer dunkleren Zeile.
@@ -60,7 +62,7 @@ public class Karte extends JPanel {
         setLayout(new BorderLayout(0, 0));
         setBackground(new Color(255, 0, 0)); // Rot
 
-        /* NORTH (Name und Typ)
+        /** NORTH (Name und Typ)
          * oberPanel verwendet BorderLayout, damit Name links und Typ rechts stehen. 
          */
         JPanel oberPanel = new JPanel();
@@ -82,7 +84,7 @@ public class Karte extends JPanel {
 
         add(oberPanel, BorderLayout.NORTH);
 
-        /* CENTER (Bild)
+        /** CENTER (Bild)
          * midPanel enthält das Bild.
          */
         JPanel midPanel = new JPanel();
@@ -96,7 +98,7 @@ public class Karte extends JPanel {
 
         add(midPanel, BorderLayout.CENTER);
 
-        /* Beschreibung (oberer Teil von SOUTH)
+        /** Beschreibung (oberer Teil von SOUTH)
          * JLabel für die Beschreibung.
          */
         JPanel descriptionPanel = new JPanel();
@@ -112,7 +114,7 @@ public class Karte extends JPanel {
 
         add(descriptionPanel, BorderLayout.SOUTH);
 
-        /* Stats (unterer Teil von SOUTH)
+        /** Stats (unterer Teil von SOUTH)
          * unterPanel als GridLayout für Leben, Rüstung, Magieresistenz, Angriff.
          */
         JPanel unterPanel = new JPanel();
@@ -144,7 +146,7 @@ public class Karte extends JPanel {
         lblAngriff.setBackground(new Color(139, 0, 0));
         unterPanel.add(lblAngriff);
 
-        /* Zusammensetzen des South-Bereichs
+        /** Zusammensetzen des South-Bereichs
          * southWrapper verbindet descriptionPanel (oben) und unterPanel (unten).
          */
         JPanel southWrapper = new JPanel();
@@ -157,7 +159,7 @@ public class Karte extends JPanel {
         add(southWrapper, BorderLayout.SOUTH);
     }
 
-    /*
+    /**
      * updateGUI:
      * Überträgt die Daten des Held-Objekts auf die GUI-Komponenten.
      * Lädt das Bild für lblBild.
@@ -184,15 +186,19 @@ public class Karte extends JPanel {
         }
     }
 
-    /*
+    /**
      * Getter für das Objekt.
+     *
+     * @return das aktuell zugeordnete Held-Objekt.
      */
     public Held getHeld() {
         return held;
     }
 
-    /*
+    /**
      * Setter für das Held-Objekt
+     *
+     * @param held Neues Held-Objekt, das auf der Karte angezeigt wird.
      */
     public void setHeld(Held held) {
         this.held = held;

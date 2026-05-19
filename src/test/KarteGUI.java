@@ -31,9 +31,11 @@ public class KarteGUI extends JFrame {
   // Ende Attribute
 
   /**
-   * Erzeugt das Testfenster und positioniert es zentriert auf dem Bildschirm.
-   * Initialisiert die GUI und fügt die Karte in das Content Pane ein.
-   */
+    * Erzeugt das Testfenster und positioniert es zentriert auf dem Bildschirm.
+    * Initialisiert die GUI und fügt die Karte in das Content Pane ein.
+    *
+    * @param title Fenstertitel des Testfensters.
+    */
   public KarteGUI (String title) {
     super (title);
     setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -57,8 +59,10 @@ public class KarteGUI extends JFrame {
   // Ende Methoden
 
   /**
-   * Startet die Testanwendung.
-   */
+    * Startet die Testanwendung.
+    *
+    * @param args Ausführung der Testanwendung.
+    */
   public static void main(String[] args) {
     new KarteGUI("KarteGUI");
   }

@@ -51,6 +51,9 @@ public class PrinceOfDarkness extends JFrame {
   /**
    * Erzeugt das Spiel-Fenster und initialisiert alle GUI-Komponenten.
    *
+    * @param title Fenstertitel des Spiel-Fensters.
+    * @param heldLinks Held, der auf der linken Seite angezeigt wird.
+    * @param heldRechts Held, der auf der rechten Seite angezeigt wird.
    */
   public PrinceOfDarkness(String title, Held heldLinks, Held heldRechts) {
     // Frame-Initialisierung
@@ -159,6 +162,7 @@ public class PrinceOfDarkness extends JFrame {
    * einander an, Lebenspunkte werden aktualisiert, es wird geprüft, ob ein
    * Gewinner feststeht oder ein Reset gebraucht ist.
    *
+    * @param evt Das ActionEvent, das den Button-Click beschreibt.
    */
   public void btn_next_ActionPerformed(ActionEvent evt) {
     Held l = karteLinks.getHeld();
