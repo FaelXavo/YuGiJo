@@ -161,7 +161,7 @@ public class Karte extends JPanel {
             lblHeldname.setText(held.getName());
             lblTyp.setText(held.getTyp());
             lblBeschreibung.setText(held.getBeschreibung());
-            lblLeben.setText("Leben: " + held.getCurrentHP());
+            lblLeben.setText("Leben: " + held.getMaxLeben());
             lblRuestung.setText("Rüstung: " + held.getRuestung());
             lblMagieresistenz.setText("Magieresistenz: " + held.getMagieresistenz());
             lblAngriff.setText("Angriff: " + held.getAngrifswert());
@@ -171,7 +171,7 @@ public class Karte extends JPanel {
              * Bei exception kommt eine Fehlermeldung.
              */
             try {
-                lblBild.setIcon(new ImageIcon("./src/Kitty.jpg"));
+                lblBild.setIcon(new ImageIcon(held.getBild()));
             } catch (Exception e) {
                 lblBild.setText("Bild nicht gefunden");
             }

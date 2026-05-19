@@ -168,6 +168,8 @@ public class PrinceOfDarkness extends JFrame {
       btn_next.setText("1. Runde");
       lebenspunkteLinks = l.getMaxLeben();
       lebenspunkteRechts= r.getMaxLeben();
+      l.setAktHP(l.getMaxLeben());
+      r.setAktHP(r.getMaxLeben());
       pgb_lebenLinks.setValue(lebenspunkteLinks);
       pgb_lebenRechts.setValue(0);
       pgb_lebenLinks.setString(lebenspunkteLinks + "");
@@ -178,12 +180,12 @@ public class PrinceOfDarkness extends JFrame {
     }else{
       //Schaden f�r linken Held berechnen
       int schadenLinks = l.getAktLeben();
-      l.leiden(r.angreifen());
+      r.angreifen(l);
       schadenLinks -= l.getAktLeben();
       
       //Schaden f�r rechten Held berechnen
       int schadenRechts = r.getAktLeben();
-      r.leiden(l.angreifen());
+      l.angreifen(r);
       schadenRechts -= r.getAktLeben();
       
       //Schaden anzeigen

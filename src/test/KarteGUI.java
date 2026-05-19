@@ -22,7 +22,7 @@ public class KarteGUI extends JFrame {
   /**
    * Test Held, dessen Daten auf der Karte angezeigt werden.
    */
-  Held h = new Held("Kitty", "Daemon", "Mistvieh", 25, 75, 50, 50);
+  Held h = new Held("Kitty", "Daemon", "Mistvieh", 25, 75, 50, 50, "./src/kitty.jpg");
 
   /**
    * Karte Komponente, die den Held anzeigt.

@@ -22,13 +22,13 @@ public class Held {
      * Erzeugt einen Helden mit allen angegebenen Eigenschaften.
      */
     public Held(String name, String typ, String beschreibung, int maxHP,
-                int angrifswert, int ruestung, int magieresistenz) {
+                int angrifswert, int ruestung, int magieresistenz, String bild) {
 
         this.name = name;
         this.typ = typ;
         this.beschreibung = beschreibung;
         this.maxHP = maxHP;
-        this.currentHP = currentHP;
+        this.currentHP = maxHP;
         this.angrifswert = angrifswert;
         this.ruestung = ruestung;
         this.magieresistenz = magieresistenz;
@@ -77,14 +77,14 @@ public class Held {
     /**
      * Gibt die maximalen Lebenspunkte des Helden zurück.
      */
-    public int getMaxHP() {
+    public int getMaxLeben() {
         return maxHP;
     }
 
     /**
      * Gibt die aktuellen Lebenspunkte des Helden zurück.
      */
-    public int getCurrentHP() {
+    public int getAktLeben() {
         return currentHP;
     }
 
@@ -142,14 +142,14 @@ public class Held {
     /**
      * Setzt die maximalen Lebenspunkte des Helden.
      */
-    public void setMaxHP(int maxHP) {
+    public void setMaxLeben(int maxHP) {
         this.maxHP = maxHP;
     }
 
     /**
      * Setzt die aktuellen Lebenspunkte des Helden.
      */
-    public void setCurrentHP(int currentHP) {
+    public void setAktHP(int currentHP) {
         this.currentHP = currentHP;
     }
 
