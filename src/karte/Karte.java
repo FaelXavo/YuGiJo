@@ -161,7 +161,7 @@ public class Karte extends JPanel {
             lblHeldname.setText(held.getName());
             lblTyp.setText(held.getTyp());
             lblBeschreibung.setText(held.getBeschreibung());
-            lblLeben.setText("Leben: " + held.getCurrentHP());
+            lblLeben.setText("Leben: " + held.getAktLeben());
             lblRuestung.setText("Rüstung: " + held.getRuestung());
             lblMagieresistenz.setText("Magieresistenz: " + held.getMagieresistenz());
             lblAngriff.setText("Angriff: " + held.getAngrifswert());

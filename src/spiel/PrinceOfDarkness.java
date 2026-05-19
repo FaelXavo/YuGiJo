@@ -178,12 +178,12 @@ public class PrinceOfDarkness extends JFrame {
     }else{
       //Schaden f�r linken Held berechnen
       int schadenLinks = l.getAktLeben();
-      l.leiden(r.angreifen());
+      r.angreifen(l);
       schadenLinks -= l.getAktLeben();
       
       //Schaden f�r rechten Held berechnen
       int schadenRechts = r.getAktLeben();
-      r.leiden(l.angreifen());
+      l.angreifen(r);
       schadenRechts -= r.getAktLeben();
       
       //Schaden anzeigen

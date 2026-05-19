@@ -77,14 +77,14 @@ public class Held {
     /**
      * Gibt die maximalen Lebenspunkte des Helden zurück.
      */
-    public int getMaxHP() {
+    public int getMaxLeben() {
         return maxHP;
     }
 
     /**
      * Gibt die aktuellen Lebenspunkte des Helden zurück.
      */
-    public int getCurrentHP() {
+    public int getAktLeben() {
         return currentHP;
     }
 
@@ -142,14 +142,14 @@ public class Held {
     /**
      * Setzt die maximalen Lebenspunkte des Helden.
      */
-    public void setMaxHP(int maxHP) {
+    public void setMaxLeben(int maxHP) {
         this.maxHP = maxHP;
     }
 
     /**
      * Setzt die aktuellen Lebenspunkte des Helden.
      */
-    public void setCurrentHP(int currentHP) {
+    public void setAktHP(int currentHP) {
         this.currentHP = currentHP;
     }
 
